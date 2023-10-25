@@ -30,7 +30,7 @@ public class HelloController {
 
         ObservWorker observWorker = new ObservWorker(name.getText(), surname.getText(), post.getText(), yo, exp, sal);
         ow.add(observWorker);
-        observWorker.name.addListener((observableValue, s, t1) -> );
+//        observWorker.name.addListener((observableValue, s, t1) ->  );
     }
 
     public void initialize(){
@@ -45,13 +45,19 @@ public class HelloController {
                 if(change.wasRemoved())  {
                     System.out.println("что-то удалилось из списка");
                     for(ObservWorker obsWor: change.getRemoved()) {
-                        eraseCar(oc);
+//                        eraseCar(oc);
                     }
                 }
             }
         });
 
-        initTable();
+//        initTable();
+    }
+
+    protected void toShowView(){
+        wTV.getColumns().clear();
+
+
     }
 
 
